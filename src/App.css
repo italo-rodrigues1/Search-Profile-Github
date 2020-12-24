@@ -1,3 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+::-webkit-scrollbar-thumb{
+  display: none;
+}
+
+body{
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+#title{
+  color:#fff;
+}
+
+.input-group{
+  align-items: center;
+  justify-content: center;
+}
+
+input[type=text]{
+  width:50%;
+  border-radius: 10px ;
+  border: 1px solid #fff;
+  padding:8px;
+}
+
+#btn-procurar{
+  background:#fff;
+  color: rgba(17, 17, 17, 0.782);
+  font-weight:500;
+  padding: 10px;
+  outline:0;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+#btn-procurar:hover{
+  opacity: 0.5;
+}
+
+span{
+  padding:0 10px;
+}
+
+h3{
+color: #fff!important;
+}
+
+#camp-bio{
+  height: 82px;
+  border-top: 2px solid #fff;
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+  color: #fff!important;
+}
+
+
+a{
+  color:#ffc600!important;
+}
+
+a:hover{
+  text-decoration: none!important;
+  list-style:none!important ;
+  color:#ffc800b3!important;
+}
+
 .App {
   text-align: center;
 }
