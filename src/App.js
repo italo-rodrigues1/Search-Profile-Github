@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GithubImage from './github-icon.svg';
+import GithubImage from './img/github-icon.svg';
 import './App.css';
 
 function App() {
@@ -41,27 +41,77 @@ function App() {
       <div className="py-5">
         
         {!userData && (
-          <img src={GithubImage} className ="responsive rounded-circle" alt="logo" height="200px"/>
+           <div className="container-profile">
+              <div className="profile-img">
+                <img src={GithubImage}  alt="logo" height="200px"/>
+    
+                <div className="followed"> 
+                  <div className="followed-profile">
+                    <p>Followers</p>
+                    <p>0</p>
+                  </div>
+    
+                  <div className="followed-profile">
+                    <p>Following </p>
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+              <h1 className="pt-3">
+                <a  target="_new">
+                  GitHub
+                </a>
+              </h1>
+              <h3>
+                GitHub
+              </h3>
+
+              <p id="camp-bio" className="text-info">
+                GitHub
+              </p>
+
+           </div>
         )}
 
         {userData &&(
-          <div>
-           <img src={userData.avatar_url} className ="responsive rounded-circle" alt="logo" height="200px"/>
-          
-          <h1 className="pt-5">
-            <a href={userData.html_url} target="_new">
-              {userData.name}
-            </a>
-          </h1>
-          <h3>
-            {userData.location}
-          </h3>
+          <div className="container-profile">
+            <div className="profile-img">
+              <img src={userData.avatar_url}  alt="logo" height="200px"/>
 
-          <p id="camp-bio" className="text-info">
-            {userData.bio}
-          </p>
+              <div className="followed"> 
+                <div className="followed-profile">
+                  <p>Followers</p>
+                  <p>{userData.followers}</p>
+                </div>
 
+                <div className="followed-profile">
+                  <p>Following </p>
+                  <p>{userData.following}</p>
+                </div>
+              </div>
+            </div>
+           
+            <h1 className="pt-3">
+              <a href={userData.html_url} target="_new">
+                {userData.name}
+              </a>
+            </h1>
+            <h3>
+              {userData.location}
+            </h3>
+
+            <p id="camp-bio" className="text-info">
+              {userData.bio}
+            </p>
+
+            <div className="container-repositorios">
+            {userData.repos_url.name}
+            </div>
           </div>
+
+          
+
+
         )}
         
       </div>

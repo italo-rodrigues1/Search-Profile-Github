@@ -15,7 +15,8 @@
 }
 
 body{
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background: #292A2E !important;
+  overflow: auto;
 }
 
 #title{
@@ -113,4 +114,44 @@ a:hover{
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.container-profile{
+  position: relative;
+  background: #00000085;
+  border-radius: 10px;
+}
+
+.profile-img{
+  position: relative;
+}
+
+.followed{
+  height:100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.followed .followed-profile{
+  background: rgb(94, 94, 94);
+  height: 8%;
+  border-radius: 10px 5px;
+  width: 60px;
+  margin: 0 15px;
+
+}
+
+.followed .followed-profile p{
+  font-size: 11px;
+  margin: 0;
+  color: #fff;
+}
+
+.profile-img img{
+  border-radius: 20% !important;
+  box-shadow: -9px 6px #ffffff14;
+  margin: -27px 0;
 }
